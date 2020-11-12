@@ -5,7 +5,7 @@ import Grid from "@material-ui/core/Grid";
 import './App.css';
 
 function App() {
-  const [expression, setExpression] = useState("");
+  const [expression, setExpression] = useState("0");
   const handleClick = (value) => {
     const newValue = expression.toString() + value;
     setExpression(newValue);
@@ -21,35 +21,35 @@ function App() {
         const calculatedValue = evaluate(expression);
         if (calculatedValue === Infinity || calculatedValue === -Infinity) {
           alert("Wrong Expression Given");
-          setExpression("");
+          setExpression("0");
         } else {
           setExpression(calculatedValue);
         }
       }
     } catch (ex) {
       alert("An Math Error Occured");
-      setExpression("");
+      setExpression("0");
     }
     // console.log(expression);
   };
 
   const clearAll = () => {
-    setExpression("");
+    setExpression("0");
   };
 
   const deleteFunction = () => {
-    if (expression.toString().length === 0) {
-      alert("No values to delete");
-      setExpression("");
+    // if (expression.toString().length === 0) {
+    //   alert("No values to delete");
+    //   setExpression("0");
       // console.log("Yaha AAYA");
-    }
+    // }
     // console.log(expression.slice(0,expression.length-1));
     try{
       var updatedDeletedExpression = expression.toString().slice(0, expression.toString().length - 1);
       setExpression(updatedDeletedExpression);
     }catch (ex) {
       alert("An Math Error Occured");
-      setExpression("");
+      setExpression("0");
     }
   };
 
