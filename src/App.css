@@ -2,7 +2,33 @@
   text-align: center;
 }
 
-.App-logo {
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.display {
+  border: 1px solid black;
+  width: 100%;
+  margin-bottom: 2%;
+  height: 35px;
+  /* height: 50px; */
+}
+
+.bttn {
+  width: 100%;
+  height: 40px;
+}
+
+.operator {
+  background-color: lightcoral;
+}
+
+#equal {
+  background-color: lightseagreen;
+}
+
+/* .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
   pointer-events: none;
@@ -30,4 +56,5 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
+
