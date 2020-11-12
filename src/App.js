@@ -20,15 +20,15 @@ function App() {
       } else {
         const calculatedValue = evaluate(expression);
         if (calculatedValue === Infinity || calculatedValue === -Infinity) {
-          alert("Wrong Expression Given");
-          setExpression("0");
+          // alert("Wrong Expression Given");
+          setExpression("Math Error");
         } else {
           setExpression(calculatedValue);
         }
       }
     } catch (ex) {
-      alert("An Math Error Occured");
-      setExpression("0");
+      // alert("An Math Error Occured");
+      setExpression("Math Error");
     }
     // console.log(expression);
   };
@@ -48,8 +48,8 @@ function App() {
       var updatedDeletedExpression = expression.toString().slice(0, expression.toString().length - 1);
       setExpression(updatedDeletedExpression);
     }catch (ex) {
-      alert("An Math Error Occured");
-      setExpression("0");
+      // alert("An Math Error Occured");
+      setExpression("Math Error");
     }
   };
 
