@@ -44,8 +44,13 @@ function App() {
       // console.log("Yaha AAYA");
     }
     // console.log(expression.slice(0,expression.length-1));
-    var updatedDeletedExpression = expression.toString().slice(0, expression.toString().length - 1);
-    setExpression(updatedDeletedExpression);
+    try{
+      var updatedDeletedExpression = expression.toString().slice(0, expression.toString().length - 1);
+      setExpression(updatedDeletedExpression);
+    }catch (ex) {
+      alert("An Math Error Occured");
+      setExpression("");
+    }
   };
 
   return (
