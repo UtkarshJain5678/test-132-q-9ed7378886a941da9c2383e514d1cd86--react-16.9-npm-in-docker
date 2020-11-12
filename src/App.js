@@ -6,9 +6,14 @@ import './App.css';
 
 function App() {
   const [expression, setExpression] = useState("0");
-  const handleClick = (value) => {
-    const newValue = expression.toString() + value;
-    setExpression(newValue);
+    const handleClick = (value) => {
+    if (expression !== "Math Error") {
+      const newValue = expression.toString() + value;
+      setExpression(newValue);
+    } else {
+      const newValue = value;
+      setExpression(newValue);
+    }
   };
 
   const calculateResult = () => {
